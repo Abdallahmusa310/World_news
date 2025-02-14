@@ -1,13 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:world_news/screens/constans/strings.dart';
+import 'package:world_news/screens/home_screen/home_screen.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(WorldnewsApp());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class WorldnewsApp extends StatelessWidget {
+  const WorldnewsApp({
+    super.key,
+  });
   @override
   Widget build(BuildContext context) {
-    return MaterialApp();
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      routes: {
+        homeScreen: (context) => HomeScreen(),
+      },
+      initialRoute: homeScreen,
+    );
   }
 }
