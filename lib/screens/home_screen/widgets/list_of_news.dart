@@ -11,15 +11,15 @@ class ListOfNews extends StatelessWidget {
         child: SingleChildScrollView(
             child: Column(
           children: [
-            Image.asset('Assets/n2.png'),
-            CoustmText(
-                text:
-                    'aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa'),
-            Image.asset('Assets/n2.png'),
-            CoustmText(text: 'aaa'),
+            ClipRRect(
+              child: Image.asset('Assets/n2.png'),
+            ),
+            CoustmText(text: 'aaaadshfhfhfhfhfhfbf'),
             Image.asset('Assets/n2.png'),
             CoustmText(text: 'aaa'),
-            Image.asset('Assets/n2.png'),
+            Image.asset('Assets/n3.png'),
+            CoustmText(text: 'aaa'),
+            Image.asset('Assets/n4.png'),
             CoustmText(text: 'aaa'),
           ],
         )),
