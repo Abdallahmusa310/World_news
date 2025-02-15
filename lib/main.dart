@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:world_news/screens/constans/strings.dart';
+import 'package:world_news/constans/strings.dart';
 import 'package:world_news/screens/home_screen/home_screen.dart';
 
 void main() {
