@@ -1,2 +1,3 @@
 const homeScreen = 'home_screen';
-const detailsscreen = '';
+const detailsscreen = 'detailsscreen';
+const catgoryScreen = 'catgoryscreen';
