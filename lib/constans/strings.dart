@@ -6,4 +6,4 @@ const q = 'q=general';
 const time = '&from=2025-01-16&sortBy=publishedAt';
 const apikey = 'apiKey=89811161a9ad486690c390a0f0516db7';
 const url =
-    'https://newsapi.org/v2/everything?q=tesla&from=2025-01-21&sortBy=publishedAt&apiKey=89811161a9ad486690c390a0f0516db7';
+    'https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=89811161a9ad486690c390a0f0516db7';

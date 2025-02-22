@@ -9,35 +9,38 @@ class NewsItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (news == null) {
-      return Container(); // إذا كانت البيانات غير موجودة، لا تعرض أي شيء
-    }
-
-    print("Displaying news: ${news!.title}"); // تحقق من أن العنوان موجود
-
     return InkWell(
-      onTap: () => Navigator.pushNamed(context, detailsscreen),
+      onTap: () => Navigator.pushNamed(
+        context,
+        detailsscreen,
+        arguments: news,
+      ),
       child: Padding(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.all(16),
         child: Hero(
-          tag: news!.title,
+          tag: 1,
           child: Column(
+            mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              ClipRRect(
-                borderRadius: BorderRadius.circular(12),
-                child:
-                    Image.network(errorBuilder: (context, error, stackTrace) {
-                  return Image.network(
-                    'Assets/n7.png', // ✅ صورة بديلة عند حدوث خطأ
+              SizedBox(
+                width: 500,
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(12),
+                  child: Image.network(
+                    news!.urlToImage,
                     fit: BoxFit.cover,
-                  );
-                }, news!.urlToImage),
+                    errorBuilder: (context, error, stackTrace) => Image.asset(
+                      'Assets/n7.png',
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+                ),
               ),
               SizedBox(height: 8),
-              CoustmText(text: news!.title),
+              CoustmText(text: news?.title ?? 'No title available'),
               SizedBox(height: 4),
-              CoustmText(text: news!.description),
+              CoustmText(text: news?.description ?? 'No description available'),
             ],
           ),
         ),

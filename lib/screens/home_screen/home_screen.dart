@@ -44,7 +44,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 return const Center(child: CircularProgressIndicator());
               } else if (state is NewsSuccess) {
                 return RefreshIndicator(
-                  // تحسين تجربة المستخدم
                   onRefresh: () async {
                     context.read<NewsCubit>().getNews();
                   },
