@@ -4,8 +4,8 @@ import 'package:world_news/data/models/news_model.dart';
 import 'package:world_news/widgets/coustm_text.dart';
 
 class NewsItem extends StatelessWidget {
-  const NewsItem({super.key, this.news});
-  final NewsModel? news;
+  const NewsItem({super.key, required this.news});
+  final NewsModel news;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class NewsItem extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.network(
-                    news!.urlToImage,
+                    news.urlToImage,
                     fit: BoxFit.cover,
                     errorBuilder: (context, error, stackTrace) => Image.asset(
                       'Assets/n7.png',
@@ -38,9 +38,9 @@ class NewsItem extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 8),
-              CoustmText(text: news?.title ?? 'No title available'),
+              CoustmText(text: news.title),
               SizedBox(height: 4),
-              CoustmText(text: news?.description ?? 'No description available'),
+              CoustmText(text: news.description),
             ],
           ),
         ),

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:world_news/screens/home_screen/widgets/category_item.dart';
+import 'package:world_news/screens/catgory_screen/widgets/category_item.dart';
 
 class ListOfCategory extends StatelessWidget {
   const ListOfCategory({super.key});

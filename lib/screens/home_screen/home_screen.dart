@@ -20,7 +20,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return BlocProvider(
       create: (context) {
-        final cubit = NewsCubit(NewsRepo(newsApi: NewsApi()));
+        final cubit = NewsCubit(NewsRepo(newsApi: NewsApi(q: 'general')));
         cubit.getNews();
         return cubit;
       },

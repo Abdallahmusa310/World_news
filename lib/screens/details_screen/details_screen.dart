@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:world_news/constans/colors.dart';
 import 'package:world_news/data/models/news_model.dart';
-import 'package:world_news/widgets/coustm_text.dart';
+import 'package:world_news/screens/details_screen/widgets/app_bar.dart';
+import 'package:world_news/screens/details_screen/widgets/list_of_details.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key, this.news});
@@ -12,47 +12,10 @@ class DetailsScreen extends StatelessWidget {
     return Scaffold(
       body: CustomScrollView(
         slivers: [
-          SliverAppBar(
-            expandedHeight: 600,
-            stretch: true,
-            pinned: true,
-            backgroundColor: Appcolor.white,
-            flexibleSpace: FlexibleSpaceBar(
-              background: Hero(
-                tag: 1,
-                child: Image.network(
-                  news!.urlToImage,
-                  fit: BoxFit.cover,
-                ),
-              ),
-              title: CoustmText(
-                text: news.title,
-                color: Appcolor.white,
-              ),
-              centerTitle: true,
-            ),
-          ),
-          SliverList(
-              delegate: SliverChildListDelegate([
-            Container(
-                margin: EdgeInsets.fromLTRB(14, 14, 14, 0),
-                padding: EdgeInsets.all(16),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    CoustmText(text: 'aaaa'),
-                    CoustmText(text: 'aaaa'),
-                    CoustmText(text: 'aaaa'),
-                    CoustmText(text: 'aaaa'),
-                    CoustmText(text: 'aaaa'),
-                    CoustmText(text: 'aaaa'),
-                    SizedBox(
-                      height: 90,
-                    )
-                  ],
-                ))
-          ]))
+          Appbar(news: news!),
+          Detailslist(
+            news: news,
+          )
         ],
       ),
     );
