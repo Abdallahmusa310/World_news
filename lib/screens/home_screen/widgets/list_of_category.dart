@@ -12,15 +12,46 @@ class ListOfCategory extends StatelessWidget {
             physics: BouncingScrollPhysics(),
             scrollDirection: Axis.horizontal,
             children: [
-              CategoryItem(image: 'Assets/Politics.png', text: 'politics'),
-              CategoryItem(image: 'Assets/sports.png', text: 'sports'),
-              CategoryItem(image: 'Assets/economics.png', text: 'economics'),
-              CategoryItem(image: 'Assets/health.png', text: 'health'),
-              CategoryItem(image: 'Assets/science.png', text: 'science'),
-              CategoryItem(image: 'Assets/tecnology.png', text: 'tecnology'),
               CategoryItem(
-                  image: 'Assets/entertamint.png', text: 'entertamint'),
-              CategoryItem(image: 'Assets/fashion.png', text: 'fathion'),
+                image: 'Assets/Politics.png',
+                text: 'politics',
+                q: 'politics',
+              ),
+              CategoryItem(
+                image: 'Assets/sports.png',
+                text: 'sports',
+                q: 'sports',
+              ),
+              CategoryItem(
+                image: 'Assets/economics.png',
+                text: 'economics',
+                q: 'economics',
+              ),
+              CategoryItem(
+                image: 'Assets/health.png',
+                text: 'health',
+                q: 'health',
+              ),
+              CategoryItem(
+                image: 'Assets/science.png',
+                text: 'science',
+                q: 'science',
+              ),
+              CategoryItem(
+                image: 'Assets/tecnology.png',
+                text: 'tecnology',
+                q: 'tecnology',
+              ),
+              CategoryItem(
+                image: 'Assets/entertamint.png',
+                text: 'entertamint',
+                q: 'entertamint',
+              ),
+              CategoryItem(
+                image: 'Assets/fashion.png',
+                text: 'fathion',
+                q: 'fathion',
+              ),
             ]),
       ),
     );

@@ -9,7 +9,9 @@ import 'package:world_news/screens/home_screen/widgets/list_of_news.dart';
 import 'package:world_news/widgets/coustm_text.dart';
 
 class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+  const HomeScreen({
+    super.key,
+  });
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -18,12 +20,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return BlocProvider(
-      create: (context) {
-        final cubit = NewsCubit(NewsRepo(newsApi: NewsApi(q: 'general')));
-        cubit.getNews();
-        return cubit;
-      },
+    return BlocProvider<NewsCubit>(
+      create: (context) =>
+          NewsCubit(NewsRepo(newsApi: NewsApi(q: 'general')))..getNews(),
       child: Scaffold(
         appBar: AppBar(
           title: Row(

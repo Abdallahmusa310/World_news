@@ -4,8 +4,9 @@ import 'package:world_news/constans/strings.dart';
 import 'package:world_news/widgets/coustm_text.dart';
 
 class CategoryItem extends StatelessWidget {
-  const CategoryItem({super.key, required this.image, required this.text});
-  final String text, image;
+  const CategoryItem(
+      {super.key, required this.image, required this.text, required this.q});
+  final String text, image, q;
 
   @override
   Widget build(BuildContext context) {

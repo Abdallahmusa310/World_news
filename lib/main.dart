@@ -5,21 +5,20 @@ import 'package:world_news/screens/details_screen/details_screen.dart';
 import 'package:world_news/screens/home_screen/home_screen.dart';
 
 void main() {
-  runApp(WorldnewsApp());
+  runApp(const WorldnewsApp());
 }
 
 class WorldnewsApp extends StatelessWidget {
-  const WorldnewsApp({
-    super.key,
-  });
+  const WorldnewsApp({super.key});
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        homeScreen: (context) => HomeScreen(),
-        detailsscreen: (context) => DetailsScreen(),
-        catgoryScreen: (context) => CatgoryScreen(),
+        homeScreen: (context) => const HomeScreen(),
+        detailsscreen: (context) => const DetailsScreen(),
+        catgoryScreen: (context) => const CatgoryScreen(),
       },
       initialRoute: homeScreen,
     );
