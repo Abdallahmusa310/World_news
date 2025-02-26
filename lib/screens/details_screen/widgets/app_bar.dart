@@ -17,15 +17,12 @@ class Appbar extends StatelessWidget {
       pinned: true,
       backgroundColor: Appcolor.white,
       flexibleSpace: FlexibleSpaceBar(
-        background: Hero(
-          tag: 1,
-          child: Image.network(
-            news.urlToImage,
+        background: Image.network(
+          news.urlToImage,
+          fit: BoxFit.cover,
+          errorBuilder: (context, error, stackTrace) => Image.asset(
+            'Assets/n7.png',
             fit: BoxFit.cover,
-            errorBuilder: (context, error, stackTrace) => Image.asset(
-              'Assets/n7.png',
-              fit: BoxFit.cover,
-            ),
           ),
         ),
         title: CoustmText(

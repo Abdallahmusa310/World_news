@@ -5,16 +5,16 @@ sealed class CategoryState {}
 
 final class CategoryInitial extends CategoryState {}
 
-final class Categoryloading extends CategoryState {
+class Categoryloading extends CategoryState {
   Categoryloading();
 }
 
-final class Categorysucsses extends CategoryState {
+class Categorysucsses extends CategoryState {
   final List<NewsModel> category;
   Categorysucsses(this.category);
 }
 
-final class Categoryfailed extends CategoryState {
+class Categoryfailed extends CategoryState {
   final String? errorMessage;
   Categoryfailed({this.errorMessage});
 }

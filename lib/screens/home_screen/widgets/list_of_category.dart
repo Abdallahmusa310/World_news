@@ -40,12 +40,12 @@ class ListOfCategory extends StatelessWidget {
               CategoryItem(
                 image: 'Assets/tecnology.png',
                 text: 'tecnology',
-                q: 'tecnology',
+                q: 'technology',
               ),
               CategoryItem(
                 image: 'Assets/entertamint.png',
                 text: 'entertamint',
-                q: 'entertamint',
+                q: 'entertainment',
               ),
               CategoryItem(
                 image: 'Assets/fashion.png',

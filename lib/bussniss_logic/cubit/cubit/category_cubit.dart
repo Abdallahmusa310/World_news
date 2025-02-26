@@ -1,5 +1,4 @@
 import 'package:bloc/bloc.dart';
-// ignore: depend_on_referenced_packages
 import 'package:meta/meta.dart';
 import 'package:world_news/data/models/news_model.dart';
 import 'package:world_news/data/repositry/category_repo.dart';
@@ -12,9 +11,9 @@ class CategoryCubit extends Cubit<CategoryState> {
   void getNews() async {
     try {
       emit(Categoryloading());
-      final news = await categoryRepo.getNews();
-      if (news.isNotEmpty) {
-        emit(Categorysucsses(news));
+      final category = await categoryRepo.getNews();
+      if (category.isNotEmpty) {
+        emit(Categorysucsses(category));
       } else {
         emit(Categoryfailed());
       }

@@ -3,6 +3,7 @@ import 'package:world_news/constans/strings.dart';
 import 'package:world_news/screens/catgory_screen/catgory_screen.dart';
 import 'package:world_news/screens/details_screen/details_screen.dart';
 import 'package:world_news/screens/home_screen/home_screen.dart';
+import 'package:world_news/screens/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const WorldnewsApp());
@@ -19,6 +20,7 @@ class WorldnewsApp extends StatelessWidget {
         homeScreen: (context) => const HomeScreen(),
         detailsscreen: (context) => const DetailsScreen(),
         catgoryScreen: (context) => const CatgoryScreen(),
+        splashScreen: (context) => const SplashScreen()
       },
       initialRoute: homeScreen,
     );

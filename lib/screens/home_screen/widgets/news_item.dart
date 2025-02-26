@@ -40,7 +40,6 @@ class NewsItem extends StatelessWidget {
               SizedBox(height: 8),
               CoustmText(text: news.title),
               SizedBox(height: 4),
-              CoustmText(text: news.description),
             ],
           ),
         ),

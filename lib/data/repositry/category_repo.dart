@@ -6,10 +6,8 @@ class CategoryRepo {
   final String q;
 
   CategoryRepo({required this.newsApi, required this.q});
-
   Future<List<NewsModel>> getNews() async {
     final newsData = await newsApi.getnews(q: q);
-
     return newsData.map((item) => NewsModel.fromJson(item)).toList();
   }
 }
