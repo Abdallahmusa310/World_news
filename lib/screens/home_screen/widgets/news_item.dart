@@ -18,7 +18,7 @@ class NewsItem extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.all(16),
         child: Hero(
-          tag: 1,
+          tag: news.title,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             crossAxisAlignment: CrossAxisAlignment.center,

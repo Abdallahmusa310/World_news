@@ -12,7 +12,7 @@ class NewsModel {
       required this.urlToImage,
       required this.time});
 
-  factory NewsModel.fromJson(Map<String, dynamic> json) {
+  factory NewsModel.fromJson(json) {
     return NewsModel(
         title: json['title'] ?? "No title",
         description: json['description'] ?? "No description available",

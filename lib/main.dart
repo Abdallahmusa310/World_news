@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:world_news/constans/strings.dart';
 import 'package:world_news/screens/catgory_screen/catgory_screen.dart';
@@ -7,6 +9,10 @@ import 'package:world_news/screens/splash_screen/splash_screen.dart';
 
 void main() {
   runApp(const WorldnewsApp());
+  String name;
+  print('enter your name');
+  name = stdin.readLineSync()!;
+  print('hello $name');
 }
 
 class WorldnewsApp extends StatelessWidget {
@@ -22,7 +28,7 @@ class WorldnewsApp extends StatelessWidget {
         catgoryScreen: (context) => const CatgoryScreen(),
         splashScreen: (context) => const SplashScreen()
       },
-      initialRoute: homeScreen,
+      initialRoute: splashScreen,
     );
   }
 }

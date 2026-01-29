@@ -39,12 +39,15 @@ class CatgoryScreen extends StatelessWidget {
                   onRefresh: () async {
                     context.read<CategoryCubit>().getNews();
                   },
-                  child: CustomScrollView(
-                    physics: const BouncingScrollPhysics(),
-                    slivers: [
-                      SliverToBoxAdapter(
-                          child: ListOfNews(newslist: state.category)),
-                    ],
+                  child: Padding(
+                    padding: const EdgeInsets.all(4),
+                    child: CustomScrollView(
+                      physics: const BouncingScrollPhysics(),
+                      slivers: [
+                        SliverToBoxAdapter(
+                            child: ListOfNews(newslist: state.category)),
+                      ],
+                    ),
                   ),
                 );
               } else if (state is Categoryfailed) {
